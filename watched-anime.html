@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watched Anime - DevilArsh70</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  
+  <header class="site-header">
+    <a href="index.html" class="home-btn">Home</a>
+    <h1>Watched Anime (156)</h1>
+  </header>
+
+  <main class="anime-grid-container">
+    <div class="controls">
+  <button class="sort-btn active" data-sort="default">All</button>
+  <button class="sort-btn" data-sort="seasons">Most Seasons</button>
+  <button class="sort-btn" data-sort="rating">Top Rated</button>
+  
+<!-- Add after .controls div -->
+<div id="admin-panel" style="display: none; background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+  <h3>Admin Controls</h3>
+  <button id="save-favorites-btn" class="cta-button">
+    <i class="fas fa-save"></i> Save to GitHub
+  </button>
+  <div id="admin-message" style="margin-top: 10px;"></div>
+</div>
+
+  <!-- Restore original order -->
+  <button class="favorite-btn">
+    <i class="fas fa-heart"></i> Favorites
+  </button>
+  <input type="text" class="search-box" placeholder="Search anime..." aria-label="Search anime">
+</div>
+
+    <div class="loading">Loading your anime collection...</div>
+
+    <div class="anime-grid">
+      <!-- Entry 1 -->
+      <div class="anime-card" data-seasons="26" data-rating="8.0">
+        <img src="images/Pokemon.jpg" alt="Pokemon series cover" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Pokemon</h3>
+          <p class="seasons">26 Seasons</p>
+          <div class="tags">
+            <span genre="Adventure">Adventure</span>
+            <span genre="Shounen">Shounen</span>
+            <span genre="Fantasy">Fantasy</span>
+          </div>
+        </div>
+      </div>
+
+<!-- Entry 2 -->
+<div class="anime-card" data-seasons="4" data-rating="9.8">
+  <img src="images/Attack on Titan.jpg" alt="Attack on Titan cover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Attack on Titan</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Dark Fantasy">Dark Fantasy</span>
+      <span genre="Drama">Drama</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 3 -->
+<div class="anime-card" data-seasons="2" data-rating="8.3">
+  <img src="images/Jujutsu Kaisen.jpg" alt="Jujutsu Kaisen cover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Jujutsu Kaisen</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Supernatural">Supernatural</span>
+      <span genre="Action">Action</span>
+      <span genre="Horror">Horror</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 4 -->
+<div class="anime-card" data-seasons="2" data-rating="8.0">
+  <img src="images/One Punch Man.jpg" alt="One Punch Man cover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">One Punch Man</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Superhero">Superhero</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 5 -->
+<div class="anime-card" data-seasons="4" data-rating="8.6">
+  <img src="images/Demon Slayer.jpg" alt="Demon Slayer cover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Demon Slayer</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Supernatural">Supernatural</span>
+      <span genre="Historical">Historical</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 6 -->
+<div class="anime-card" data-seasons="1" data-rating="9.5">
+  <img src="images/Cyberpunk Edge Runners.jpg" alt="Cyberpunk Edge Runners cover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Cyberpunk: Edgerunners</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Sci-fi">Sci-fi</span>
+      <span genre="Cyberpunk">Cyberpunk</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 7 -->
+<div class="anime-card" data-seasons="4" data-rating="7.5">
+  <img src="images/High School DxD.jpg" alt="High School DxD" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">High School DxD</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Ecchi">Ecchi</span>
+      <span genre="Harem">Harem</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 8 -->
+<div class="anime-card" data-seasons="1" data-rating="7.1">
+  <img src="images/High School of the Dead.jpg" alt="High School of the Dead" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">High School of the Dead</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Horror">Horror</span>
+      <span genre="Ecchi">Ecchi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 9 -->
+<div class="anime-card" data-seasons="1" data-rating="8.0">
+  <img src="images/Zom 100.jpg" alt="Zom 100" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Zom 100: Bucket List of the Dead</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Adventure">Adventure</span>
+      <span genre="Comedy">Comedy</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 10 -->
+<div class="anime-card" data-seasons="2" data-rating="9.7">
+  <img src="images/The Eminence in Shadows.jpg" alt="The Eminence in Shadows" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Eminence in Shadows</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Isekai">Isekai</span>
+      <span genre="Comedy">Comedy</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 11 -->
+<div class="anime-card" data-seasons="2" data-rating="7.0">
+  <img src="images/The Misfit of the Demon King.jpg" alt="The Misfit of the Demon King" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Misfit of the Demon King</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Shounen">Shounen</span>
+      <span genre="Fantasy">Fantasy</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 12 -->
+<div class="anime-card" data-seasons="1" data-rating="6.8">
+  <img src="images/Vermeil in Gold.jpg" alt="Vermeil in Gold" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Vermeil in Gold</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Ecchi">Ecchi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 13 -->
+<div class="anime-card" data-seasons="3" data-rating="8.5">
+  <img src="images/Tokyo Revengers.jpg" alt="Tokyo Revengers" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Tokyo Revengers</h3>
+    <p class="seasons">3 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Drama">Drama</span>
+      <span genre="Time Travel">Time Travel</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 14 -->
+<div class="anime-card" data-seasons="1" data-rating="10.0">
+  <img src="images/Death Note.jpg" alt="Death Note" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Death Note</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Mystery">Mystery</span>
+      <span genre="Crime">Crime</span>
+      <span genre="Psychological">Psychological</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 15 -->
+<div class="anime-card" data-seasons="3" data-rating="9.6">
+  <img src="images/Tokyo Ghoul.jpg" alt="Tokyo Ghoul" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Tokyo Ghoul</h3>
+    <p class="seasons">3 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Horror">Horror</span>
+      <span genre="Drama">Drama</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 16 -->
+<div class="anime-card" data-seasons="16" data-rating="9.2">
+  <img src="images/Bleach.jpg" alt="Bleach" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Bleach</h3>
+    <p class="seasons">16 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Shounen">Shounen</span>
+      <span genre="Supernatural">Supernatural</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 17 -->
+<div class="anime-card" data-seasons="3" data-rating="7.9">
+  <img src="images/Classroom of the Elite.jpg" alt="Classroom of the Elite" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Classroom of the Elite</h3>
+    <p class="seasons">3 Seasons</p>
+    <div class="tags">
+      <span genre="Thriller">Thriller</span>
+      <span genre="Drama">Drama</span>
+      <span genre="Psychological">Psychological</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 18 -->
+<div class="anime-card" data-seasons="2" data-rating="7.3">
+  <img src="images/SpyxFamily.jpg" alt="SpyxFamily" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Spy x Family</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Slice of Life">Slice of Life</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 19 -->
+<div class="anime-card" data-seasons="1" data-rating="7.5">
+  <img src="images/Chainsaw Man.jpg" alt="Chainsaw Man" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Chainsaw Man</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Horror">Horror</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 20 -->
+<div class="anime-card" data-seasons="1" data-rating="7.9">
+  <img src="images/My Dress-Up Darling.jpg" alt="My Dress-Up Darling" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">My Dress-Up Darling</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Romance">Romance</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Slice of Life">Slice of Life</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 21 -->
+<div class="anime-card" data-seasons="1" data-rating="6.8">
+  <img src="images/Migi & Dali.jpg" alt="Migi & Dali" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Migi & Dali</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Comedy">Comedy</span>
+      <span genre="Mystery">Mystery</span>
+      <span genre="Psychological">Psychological</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 22 -->
+<div class="anime-card" data-seasons="1" data-rating="7.4">
+  <img src="images/Nier Automata.jpg" alt="Nier Automata" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">NieR:Automata</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Adventure">Adventure</span>
+      <span genre="Sci-fi">Sci-fi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 23 -->
+<div class="anime-card" data-seasons="2" data-rating="9.8">
+  <img src="images/Code Geass.jpg" alt="Code Geass" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Code Geass</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Sci-fi">Sci-fi</span>
+      <span genre="Mecha">Mecha</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 24 -->
+<div class="anime-card" data-seasons="4" data-rating="8.4">
+  <img src="images/Black Clover.jpg" alt="Black Clover" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Black Clover</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Adventure">Adventure</span>
+      <span genre="Shounen">Shounen</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 25 -->
+<div class="anime-card" data-seasons="1" data-rating="7.4">
+  <img src="images/The Kingdom of Ruins.jpg" alt="The Kingdom of Ruins" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Kingdom of Ruins</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Dark Fantasy">Dark Fantasy</span>
+      <span genre="Drama">Drama</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 26 -->
+<div class="anime-card" data-seasons="2" data-rating="7.5">
+  <img src="images/Mashle.jpg" alt="Mashle" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Mashle</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Fantasy">Fantasy</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 27 -->
+<div class="anime-card" data-seasons="2" data-rating="8.9">
+  <img src="images/Solo Leveling.jpg" alt="Solo Leveling" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Solo Leveling</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Adventure">Adventure</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 28 -->
+<div class="anime-card" data-seasons="3" data-rating="9.8">
+  <img src="images/Re:zero.jpg" alt="Re:zero" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Re:Zero</h3>
+    <p class="seasons">3 Seasons</p>
+    <div class="tags">
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Isekai">Isekai</span>
+      <span genre="Drama">Drama</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 29 -->
+<div class="anime-card" data-seasons="1" data-rating="8.7">
+  <img src="images/Darling in the Franxx.jpg" alt="Darling in the Franxx" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Darling in the Franxx</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Mecha">Mecha</span>
+      <span genre="Romance">Romance</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 30 -->
+<div class="anime-card" data-seasons="1" data-rating="7.1">
+  <img src="images/Demon King of Exablur Academy.jpg" alt="Demon King of Exablur Academy" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Demon King of Exablur Academy</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="School">School</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 31 -->
+<div class="anime-card" data-seasons="1" data-rating="6.9">
+  <img src="images/My Instant Death Ability.jpg" alt="My Instant Death Ability" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">My Instant Death Ability</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Isekai">Isekai</span>
+      <span genre="Comedy">Comedy</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 32 -->
+<div class="anime-card" data-seasons="1" data-rating="7.0">
+  <img src="images/The Greatest Demon Lord is Reborn as Typically Nobody.jpg" alt="The Greatest Demon Lord is Reborn as Typically Nobody" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Greatest Demon Lord is Reborn as Typically Nobody</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Isekai">Isekai</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 33 -->
+<div class="anime-card" data-seasons="1" data-rating="7.9">
+  <img src="images/Berserk of Gluttony.jpg" alt="Berserk of Gluttony" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Berserk of Gluttony</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Adventure">Adventure</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 34 -->
+<div class="anime-card" data-seasons="2" data-rating="7.6">
+  <img src="images/The Irregular at Magic High School.jpg" alt="The Irregular at Magic High School" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Irregular at Magic High School</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Sci-fi">Sci-fi</span>
+      <span genre="School">School</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 35 -->
+<div class="anime-card" data-seasons="22" data-rating="8.8">
+  <img src="images/Naruto Shippuden.jpg" alt="Naruto Shippuden" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Naruto Shippuden</h3>
+    <p class="seasons">22 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Adventure">Adventure</span>
+      <span genre="Shounen">Shounen</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 36 -->
+<div class="anime-card" data-seasons="5" data-rating="7.9">
+  <img src="images/Date a Live.jpg" alt="Date a Live" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Date a Live</h3>
+    <p class="seasons">5 Seasons</p>
+    <div class="tags">
+      <span genre="Romance">Romance</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="Harem">Harem</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 37 -->
+<div class="anime-card" data-seasons="4" data-rating="6.2">
+  <img src="images/The Daily Life of Immortal King.jpg" alt="The Daily Life of Immortal King" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Daily Life of Immortal King</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Comedy">Comedy</span>
+      <span genre="School">School</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 38 -->
+<div class="anime-card" data-seasons="4" data-rating="9.6">
+  <img src="images/Sword Art Online.jpg" alt="Sword Art Online" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Sword Art Online</h3>
+    <p class="seasons">4 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Adventure">Adventure</span>
+      <span genre="Romance">Romance</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 39 -->
+<div class="anime-card" data-seasons="1" data-rating="6.9">
+  <img src="images/Chivalry of a Failed Knight.jpg" alt="Chivalry of a Failed Knight" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Chivalry of a Failed Knight</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Romance">Romance</span>
+      <span genre="School">School</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 40 -->
+<div class="anime-card" data-seasons="2" data-rating="8.0">
+  <img src="images/The Promised Neverland.jpg" alt="The Promised Neverland" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Promised Neverland</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Horror">Horror</span>
+      <span genre="Mystery">Mystery</span>
+      <span genre="Psychological">Psychological</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 41 -->
+<div class="anime-card" data-seasons="1" data-rating="6.7">
+  <img src="images/The Hidden Dungeon Only I can Enter.jpg" alt="The Hidden Dungeon Only I can Enter" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Hidden Dungeon Only I can Enter</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Ecchi">Ecchi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 42 -->
+<div class="anime-card" data-seasons="1" data-rating="7.3">
+  <img src="images/Spirit Chronicles.jpg" alt="Spirit Chronicles" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Spirit Chronicles</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Isekai">Isekai</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 43 -->
+<div class="anime-card" data-seasons="1" data-rating="7.1">
+  <img src="images/The Akashic Record of the Bastard Instructor.jpg" alt="The Akashic Record of the Bastard Instructor" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">The Akashic Record of the Bastard Instructor</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="School">School</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 44 -->
+<div class="anime-card" data-seasons="2" data-rating="7.0">
+  <img src="images/Our Last Crusade or the Rising of a New World.jpg" alt="Our Last Crusade or the Rising of a New World" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Our Last Crusade or the Rising of a New World</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Romance">Romance</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 45 -->
+<div class="anime-card" data-seasons="2" data-rating="7.2">
+  <img src="images/How a Realist Hero Builds his Kingdom.jpg" alt="How a Realist Hero Builds his Kingdom" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">How a Realist Hero Builds his Kingdom</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Politics">Politics</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 46 -->
+<div class="anime-card" data-seasons="1" data-rating="6.9">
+  <img src="images/Death March to the Parallel World.jpg" alt="Death March to the Parallel World" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Death March to the Parallel World</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Isekai">Isekai</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 47 -->
+<div class="anime-card" data-seasons="1" data-rating="6.9">
+  <img src="images/Isekai Cheat Magician.jpg" alt="Isekai Cheat Magician" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Isekai Cheat Magician</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Isekai">Isekai</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 48 -->
+<div class="anime-card" data-seasons="1" data-rating="8.7">
+  <img src="images/Trapped in a Dating Sim.jpg" alt="Trapped in a Dating Sim" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Trapped in a Dating Sim</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Comedy">Comedy</span>
+      <span genre="Romance">Romance</span>
+      <span genre="Sci-fi">Sci-fi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 49 -->
+<div class="anime-card" data-seasons="2" data-rating="7.3">
+  <img src="images/Banished from the Hero's Party, So I Decided to Live a Quite Life.jpg" alt="Banished from the Hero's Party, So I Decided to Live a Quite Life" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Banished from the Hero's Party, So I Decided to Live a Quite Life</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Romance">Romance</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 50 -->
+<div class="anime-card" data-seasons="2" data-rating="8.3">
+  <img src="images/Wind Breaker.jpg" alt="Wind Breaker" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Wind Breaker</h3>
+    <p class="seasons">2 Seasons</p>
+    <div class="tags">
+      <span genre="Comedy">Comedy</span>
+      <span genre="Romance">Romance</span>
+      <span genre="Sci-fi">Sci-fi</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 51 -->
+<div class="anime-card" data-seasons="1" data-rating="6.3">
+  <img src="images/Banished Former Hero Lives as he please.jpg" alt="Banished Former Hero Lives as he please" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">Banished Former Hero Lives as he please</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Action">Action</span>
+      <span genre="Fantasy">Fantasy</span>
+      <span genre="Adventure">Adventure</span>
+    </div>
+  </div>
+</div>
+
+<!-- Entry 52 -->
+<div class="anime-card" data-seasons="1" data-rating="7.8">
+  <img src="images/I am Quitting Heroine.jpg" alt="I am Quitting Heroine" class="anime-cover" loading="lazy">
+  <div class="anime-details">
+    <h3 class="title">I am Quitting Heroine</h3>
+    <p class="seasons">1 Season</p>
+    <div class="tags">
+      <span genre="Drama">Drama</span>
+      <span genre="Slice of Life">Slice of Life</span>
+      <span genre="Psychological">Psychological</span>
+    </div>
+  </div>
+</div>
+
+      <!-- Entry 53 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.1">
+        <img src="images/The world's Finest Assasian gets Reincarnated in Another World as Aristocrat.jpg" alt="The world's Finest Assasian gets Reincarnated in Another World as Aristocrat" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The World's Finest Assassin Gets Reincarnated in Another World as an Aristocrat</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 54 -->
+      <div class="anime-card" data-seasons="3" data-rating="9.7">
+        <img src="images/That Time I Got Reincarnated as a Slime.jpg" alt="That Time I Got Reincarnated as a Slime" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">That Time I Got Reincarnated as a Slime</h3>
+          <p class="seasons">3 Seasons</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 55 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.6">
+        <img src="images/The Reincarnation of the Strongest Exocist in Another World.jpg" alt="The Reincarnation of the Strongest Exocist in Another World" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Reincarnation of the Strongest Exorcist in Another World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 56 -->
+      <div class="anime-card" data-seasons="3" data-rating="8.6">
+        <img src="images/Mushoku Tensei Jobless Reincarnation.jpg" alt="Mushoku Tensei Jobless Reincarnation" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Mushoku Tensei: Jobless Reincarnation</h3>
+          <p class="seasons">3 Seasons</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 57 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.5">
+        <img src="images/I'm Giving the Disgraced Noble Lady I Rescued a Crash Course in Naughtiness.jpg" alt="I'm Giving the Disgraced Noble Lady I Rescued a Crash Course in Naughtiness" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">I'm Giving the Disgraced Noble Lady I Rescued a Crash Course in Naughtiness</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Fantasy">Fantasy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 58 -->
+      <div class="anime-card" data-seasons="1" data-rating="10">
+        <img src="images/The Angle Next Door Spoiled me Rotten.jpg" alt="The Angle Next Door Spoiled me Rotten" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Angel Next Door Spoils Me Rotten</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 59 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.1">
+        <img src="images/Case Study of Vanitas.jpg" alt="Case Study of Vanitas" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Case Study of Vanitas</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Mystery">Mystery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 60 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.9">
+        <img src="images/Farming Life in Another World.jpg" alt="Farming Life in Another World" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Farming Life in Another World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 61 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.4">
+        <img src="images/Handyman Saitou in Another World.jpg" alt="Handyman Saitou in Another World" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Handyman Saitou in Another World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 62 -->
+      <div class="anime-card" data-seasons="2" data-rating="6.2">
+        <img src="images/Plunderer.jpg" alt="Plunderer" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Plunderer</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Ecchi">Ecchi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 63 -->
+      <div class="anime-card" data-seasons="2" data-rating="6.8">
+        <img src="images/Infinite Stratos.jpg" alt="Infinite Stratos" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Infinite Stratos</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Harem">Harem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 64 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.0">
+        <img src="images/My Step-Sister is My Ex.jpg" alt="My Step-Sister is My Ex" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">My Step-Sister is My Ex</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 65 -->
+      <div class="anime-card" data-seasons="1" data-rating="9.4">
+        <img src="images/Tada Never Fall in Love.jpg" alt="Tada Never Fall in Love" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Tada Never Falls in Love</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 66 -->
+      <div class="anime-card" data-seasons="2" data-rating="9.6">
+        <img src="images/Horimiya.jpg" alt="Horimiya" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Horimiya</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 67 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.3">
+        <img src="images/So, I can't Play H.jpg" alt="So, I can't Play H" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">So, I Can't Play H!</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Comedy">Comedy</span>
+            <span genre="Ecchi">Ecchi</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 68 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.4">
+        <img src="images/Why Raeliana Ended Up at the Duke's Mansion.jpg" alt="Why Raeliana Ended Up at the Duke's Mansion" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Why Raeliana Ended Up at the Duke's Mansion</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 69 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.2">
+        <img src="images/Overflow.jpg" alt="Overflow" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Overflow</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Ecchi">Ecchi</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 70 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.1">
+        <img src="images/Redo of the Healer.jpg" alt="Redo of the Healer" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Redo of Healer</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Ecchi">Ecchi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 71 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.3">
+        <img src="images/WorldEnd.jpg" alt="WorldEnd" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">WorldEnd: What Do You Do at the End of the World?</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 72 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.5">
+        <img src="images/Tales of Wedding rings.jpg" alt="Tales of Wedding rings" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Tales of Wedding Rings</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 73 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.0">
+        <img src="images/Love, Chunibyo & Other Delusions.jpg" alt="Love, Chunibyo & Other Delusions" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Love, Chunibyo & Other Delusions</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 74 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.8">
+        <img src="images/Tomodachi Game.jpg" alt="Tomodachi Game" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Tomodachi Game</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Psychological">Psychological</span>
+            <span genre="Thriller">Thriller</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 75 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/Undefeated Bahamut Chronicle.jpg" alt="Undefeated Bahamut Chronicle" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Undefeated Bahamut Chronicle</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Harem">Harem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 76 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.9">
+        <img src="images/Snow white with the red hair.jpg" alt="Snow white with the red hair" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Snow White with the Red Hair</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 77 -->
+      <div class="anime-card" data-seasons="1" data-rating="5.8">
+        <img src="images/Conception.jpg" alt="Conception" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Conception</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Harem">Harem</span>
+            <span genre="Ecchi">Ecchi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 78 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.5">
+        <img src="images/Myriad colours phantom world.jpg" alt="Myriad colours phantom world" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Myriad Colors Phantom World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 79 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.9">
+        <img src="images/Kaiju no. 8.jpg" alt="Kaiju no. 8" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Kaiju No. 8</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Monster">Monster</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 80 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.7">
+        <img src="images/Am I actually the strongest.jpg" alt="Am I actually the strongest" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Am I Actually the Strongest?</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 81 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.6">
+        <img src="images/Boarding school Juliet.jpg" alt="Boarding school Juliet" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Boarding School Juliet</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 82 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.4">
+        <img src="images/Gosick.jpg" alt="Gosick" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Gosick</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Mystery">Mystery</span>
+            <span genre="Historical">Historical</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 83 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.3">
+        <img src="images/The Quintessential Quintuplets.jpg" alt="The Quintessential Quintuplets" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Quintessential Quintuplets</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Harem">Harem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 84 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.2">
+        <img src="images/Arifureta.jpg" alt="Arifureta" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Arifureta: From Commonplace to World's Strongest</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Harem">Harem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 85 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.0">
+        <img src="images/Engage kiss.jpg" alt="Engage kiss" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Engage Kiss</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 86 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/Crimson Ragna.jpg" alt="Crimson Ragna" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Crimson Ragna</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 87 -->
+      <div class="anime-card" data-seasons="Movie" data-rating="8.7">
+        <img src="images/I want to eat your pancreas.jpg" alt="I want to eat your pancreas (Manga)" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">I Want to Eat Your Pancreas</h3>
+          <p class="seasons">Movie</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 88 -->
+      <div class="anime-card" data-seasons="2" data-rating="7.1">
+        <img src="images/The Asterisk War.jpg" alt="The Asterisk War" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Asterisk War</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 89 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.8">
+        <img src="images/Wise Man's Grandchild.jpg" alt="Wise Man's Grandchild" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Wise Man's Grandchild</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 90 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.5">
+        <img src="images/I Got a Cheat Skill in Another World.jpg" alt="I Got a Cheat Skill in Another World and Became Unrivaled in the Real World, Too" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">I Got a Cheat Skill in Another World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 91 -->
+      <div class="anime-card" data-seasons="2" data-rating="7.3">
+        <img src="images/How not to summon a demon lord.jpg" alt="How not to summon a demon lord" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">How Not to Summon a Demon Lord</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Ecchi">Ecchi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 92 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/CHOYOYU!.jpg" alt="CHOYOYU!: High School Prodigies Have It Easy Even in Another World!" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">CHOYOYU!: High School Prodigies Have It Easy Even in Another World!</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 93 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.1">
+        <img src="images/Akame ga kill.jpg" alt="Akame ga kill" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Akame ga Kill!</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 94 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.2">
+        <img src="images/The Café Terrace and Its Goddesses.jpg" alt="The Café Terrace and Its Goddesses" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Café Terrace and Its Goddesses</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Harem">Harem</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 95 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.0">
+        <img src="images/Failure Frame.jpg" alt="Failure Frame" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Failure Frame</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 96 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.8">
+        <img src="images/Guilty crown.jpg" alt="Guilty crown" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Guilty Crown</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 97 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.3">
+        <img src="images/Tower of God.jpg" alt="Tower of God" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Tower of God</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 98 -->
+      <div class="anime-card" data-seasons="3" data-rating="8.8">
+        <img src="images/The Rising of the Shield Hero.jpg" alt="The Rising of the Shield Hero" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Rising of the Shield Hero</h3>
+          <p class="seasons">3 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 99 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.5">
+        <img src="images/Pseudo Harem.jpg" alt="Pseudo Harem" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Pseudo Harem</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 100 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.7">
+        <img src="images/No game no life.jpg" alt="No game no life" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">No Game No Life</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Adventure">Adventure</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 101 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/The Strongest Magician in the Demon Lord army was a Human.jpg" alt="The Strongest Magician in the Demon Lord army was a Human" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Strongest Magician in the Demon Lord's Army Was a Human</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 102 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.1">
+        <img src="images/Charlotte.jpg" alt="Charlotte" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Charlotte</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Drama">Drama</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 103 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.2">
+        <img src="images/Shimoneta.jpg" alt="Shimoneta" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Shimoneta: A Boring World Where the Concept of Dirty Jokes Doesn't Exist</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Comedy">Comedy</span>
+            <span genre="Ecchi">Ecchi</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 104 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.6">
+        <img src="images/86.jpg" alt="86" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">86</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 105 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.5">
+        <img src="images/Alys Sometimes Hide her feelings in Russian.jpg" alt="Alys Sometimes Hide her feelings in Russian" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Alys Sometimes Hide Her Feelings in Russian</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 106 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.4">
+        <img src="images/Hell's Paradise.jpg" alt="Hell's Paradise" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Hell's Paradise</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Historical">Historical</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 107 -->
+      <div class="anime-card" data-seasons="3" data-rating="8.3">
+        <img src="images/Dr.Stone.jpg" alt="Dr.Stone" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Dr. Stone</h3>
+          <p class="seasons">3 Seasons</p>
+          <div class="tags">
+            <span genre="Adventure">Adventure</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 108 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/Mashiroiro Symphony.jpg" alt="Mashiroiro Symphony" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Mashiroiro Symphony</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Drama">Drama</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 109 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.1">
+        <img src="images/Chained Soldier.jpg" alt="Chained Soldier" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Chained Soldier</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Ecchi">Ecchi</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 110 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.4">
+        <img src="images/Chillin' in Another World with Level 2 Super Cheat Powers.jpg" alt="Chillin' in Another World with Level 2 Super Cheat Powers" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Chillin' in Another World with Level 2 Super Cheat Powers</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 111 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.8">
+        <img src="images/Takt Op. Destiny.jpg" alt="Takt Op. Destiny" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Takt Op. Destiny</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Music">Music</span>
+            <span genre="Sci-fi">Sci-fi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 112 -->
+      <div class="anime-card" data-seasons="2" data-rating="10">
+        <img src="images/TONIKAWA.jpg" alt="TONIKAWA: Over The Moon For You" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">TONIKAWA: Over The Moon For You</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 113 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.5">
+        <img src="images/Rascal Does Not Dream of a Dreaming Girl.jpg" alt="Rascal Does Not Dream of a Dreaming Girl" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Rascal Does Not Dream of a Dreaming Girl</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 114 -->
+      <div class="anime-card" data-seasons="Movie" data-rating="7.9">
+        <img src="images/To Me, the One Who Loved You.jpg" alt="To Me, the One Who Loved You" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">To Me, the One Who Loved You</h3>
+          <p class="seasons">Movie</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 115 -->
+      <div class="anime-card" data-seasons="Movie" data-rating="8.0">
+        <img src="images/To Every You I've Loved Before.jpg" alt="To Every You I've Loved Before" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">To Every You I've Loved Before</h3>
+          <p class="seasons">Movie</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 116 -->
+      <div class="anime-card" data-seasons="Movie" data-rating="9.2">
+        <img src="images/Your Name.jpg" alt="Your Name" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Your Name</h3>
+          <p class="seasons">Movie</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 117 -->
+      <div class="anime-card" data-seasons="Movie" data-rating="9.1">
+        <img src="images/The Tunnel to Summer, the Exit of Goodbyes.jpg" alt="The Tunnel to Summer, the Exit of Goodbyes" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Tunnel to Summer, the Exit of Goodbyes</h3>
+          <p class="seasons">Movie</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 118 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.3">
+        <img src="images/Plastic Memory's.jpg" alt="Plastic Memory's" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Plastic Memories</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 119 -->
+      <div class="anime-card" data-seasons="2" data-rating="7.8">
+        <img src="images/Sugar Apple Fairy Tale.jpg" alt="Sugar Apple Fairy Tale" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Sugar Apple Fairy Tale</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 120 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.6">
+        <img src="images/Atri My Dear Moments.jpg" alt="Atri: My Dear Moments" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Atri: My Dear Moments</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Romance">Romance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 121 -->
+      <div class="anime-card" data-seasons="4" data-rating="8.9">
+        <img src="images/Is It Wrong to Try to Pick Up Girls in a Dungeon.jpg" alt="Is It Wrong to Try to Pick Up Girls in a Dungeon?" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Is It Wrong to Try to Pick Up Girls in a Dungeon?</h3>
+          <p class="seasons">4 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 122 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.0">
+        <img src="images/The Strongest Magician with the weakest Crest.jpg" alt="The Strongest Magician with the weakest Crest" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Strongest Magician with the Weakest Crest</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 123 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.2">
+        <img src="images/A Galaxy Next Door.jpg" alt="A Galaxy Next Door" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">A Galaxy Next Door</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 124 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.5">
+        <img src="images/Day's with my Stepsister.jpg" alt="Day's with my Stepsister" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Days with My Stepsister</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 125 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.8">
+        <img src="images/Let This Grieving Soul Retire.jpg" alt="Let This Grieving Soul Retire!" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Let This Grieving Soul Retire!</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 126 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.9">
+        <img src="images/Dororo.jpg" alt="Dororo" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Dororo</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Historical">Historical</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 127 -->
+      <div class="anime-card" data-seasons="2" data-rating="9.7">
+        <img src="images/Vinland Saga.jpg" alt="Vinland Saga" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Vinland Saga</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Historical">Historical</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 128 -->
+      <div class="anime-card" data-seasons="2" data-rating="9.3">
+        <img src="images/Steins;Gate.jpg" alt="Steins;Gate" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Steins;Gate</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Thriller">Thriller</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 129 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.5">
+        <img src="images/Good bye, Dragon Life.jpg" alt="Good bye, Dragon Life" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Goodbye, Dragon Life</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 130 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.7">
+        <img src="images/Loner life in another world.jpg" alt="Loner life in another world" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Loner Life in Another World</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 131 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.2">
+        <img src="images/Black Bullet.jpg" alt="Black Bullet" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Black Bullet</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Drama">Drama</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 132 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.1">
+        <img src="images/The New Gate.jpg" alt="The New Gate" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The New Gate</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Isekai">Isekai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 133 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.4">
+        <img src="images/Tying the Knot with an Amagami Sister.jpg" alt="Tying the Knot with an Amagami Sister" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Tying the Knot with an Amagami Sister</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 134 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.6">
+        <img src="images/Class President is a Maid.jpg" alt="Class President is a Maid" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Class President is a Maid!</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="School">School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 135 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.3">
+        <img src="images/Angel's of Death.jpg" alt="Angel's of Death" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Angels of Death</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Psychological">Psychological</span>
+            <span genre="Horror">Horror</span>
+            <span genre="Thriller">Thriller</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 136 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.5">
+        <img src="images/Maoyu.jpg" alt="Maoyu: Archenemy & Hero" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Maoyu: Archenemy & Hero</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 137 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/You Are Ms. Servant.jpg" alt="You Are Ms. Servant" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">You Are Ms. Servant</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Comedy">Comedy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 138 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.7">
+        <img src="images/The Wrong Way to Use Healing Magic.jpg" alt="The Wrong Way to Use Healing Magic" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Wrong Way to Use Healing Magic</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 139 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.0">
+        <img src="images/Demon Lord 2099.jpg" alt="Demon Lord 2099" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Demon Lord 2099</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Cyberpunk">Cyberpunk</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 140 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.2">
+        <img src="images/Noragami.jpg" alt="Noragami" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Noragami</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 141 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.3">
+        <img src="images/2.5 Dimensional Seduction.jpg" alt="2.5 Dimensional Seduction" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">2.5 Dimensional Seduction</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Comedy">Comedy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 142 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.5">
+        <img src="images/Hazure Skill Kinomi Master.jpg" alt="Hazure Skill Kinomi Master" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Hazure Skill "Kinomi Master"</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 143 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.1">
+        <img src="images/The Unwanted Undead Adventurer.jpg" alt="The Unwanted Undead Adventurer" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Unwanted Undead Adventurer</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 144 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.8">
+        <img src="images/Dead Mount Death Play.jpg" alt="Dead Mount Death Play" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Dead Mount Death Play</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Supernatural">Supernatural</span>
+            <span genre="Fantasy">Fantasy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 145 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.6">
+        <img src="images/Higehiro.jpg" alt="Higehiro" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Higehiro: After Being Rejected, I Shaved and Took in a High School Runaway</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Drama">Drama</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 146 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.9">
+        <img src="images/I Parry Everything.jpg" alt="I Parry Everything" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">I Parry Everything</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 147 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.3">
+        <img src="images/cerberus.jpg" alt="cerberus" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Cerberus</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Adventure">Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 148 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.6">
+        <img src="images/Astra lost in Space.jpg" alt="Astra lost in Space" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Astra Lost in Space</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Sci-fi">Sci-fi</span>
+            <span genre="Adventure">Adventure</span>
+            <span genre="Mystery">Mystery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 149 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.4">
+        <img src="images/An Archdemon's Dilemma.jpg" alt="An Archdemon's Dilemma: How to Love Your Elf Bride" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">An Archdemon's Dilemma: How to Love Your Elf Bride</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 150 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.6">
+        <img src="images/Rokka Braves Of The Six Flowers.jpg" alt="Rokka Braves Of The Six Flowers" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Rokka: Braves of the Six Flowers</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Mystery">Mystery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 151 -->
+      <div class="anime-card" data-seasons="1" data-rating="6.7">
+        <img src="images/The Ossan Newbie Adventurer.jpg" alt="The Ossan Newbie Adventurer" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Ossan Newbie Adventurer</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Comedy">Comedy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 152 -->
+      <div class="anime-card" data-seasons="1" data-rating="7.5">
+        <img src="images/The Ice Guy and His Cool Female Colleague.jpg" alt="The Ice Guy and His Cool Female Colleague" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Ice Guy and His Cool Female Colleague</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Comedy">Comedy</span>
+            <span genre="Supernatural">Supernatural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 153 -->
+      <div class="anime-card" data-seasons="2" data-rating="8.4">
+        <img src="images/The Saga of Tanya the Evil.jpg" alt="The Saga of Tanya the Evil" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">The Saga of Tanya the Evil</h3>
+          <p class="seasons">2 Seasons</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Fantasy">Fantasy</span>
+            <span genre="Military">Military</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 154 -->
+      <div class="anime-card" data-seasons="Manga" data-rating="7.9">
+        <img src="images/Jūjika no Rokunin.jpg" alt="Jūjika no Rokunin" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">Jūjika no Rokunin</h3>
+          <p class="seasons">Manga</p>
+          <div class="tags">
+            <span genre="Action">Action</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Psychological">Psychological</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 155 -->
+      <div class="anime-card" data-seasons="1" data-rating="8.2">
+        <img src="images/ReLife.jpg" alt="ReLife" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">ReLIFE</h3>
+          <p class="seasons">1 Season</p>
+          <div class="tags">
+            <span genre="Romance">Romance</span>
+            <span genre="Drama">Drama</span>
+            <span genre="Slice of Life">Slice of Life</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entry 156 -->
+      <div class="anime-card" data-seasons="20+" data-rating="10">
+        <img src="images/one-piece.jpg" alt="One Piece cover" class="anime-cover" loading="lazy">
+        <div class="anime-details">
+          <h3 class="title">One Piece</h3>
+          <p class="seasons">20+ Seasons</p>
+          <div class="tags">
+            <span genre="Adventure">Adventure</span>
+            <span genre="Action">Action</span>
+            <span genre="Shounen">Shounen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with <i class="fas fa-heart"></i> by DevilArsh70</p>
+    <p class="anime-quote">"I'm just a shut-in anime weeb who don't touch grass."</p>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Loading animation
+    const loading = document.querySelector('.loading');
+    const grid = document.querySelector('.anime-grid');
+    
+    if (grid.children.length > 5) {
+      loading.style.display = 'block';
+      grid.style.opacity = '0.5';
+      
+      setTimeout(() => {
+        loading.style.display = 'none';
+        grid.style.opacity = '1';
+      }, 800);
+    }
+
+// ===== ADMIN MODE =====
+  let adminMode = false;
+  const ADMIN_PASSWORD = "707762";
+  const GITHUB_TOKEN = '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'; // Create at: github.com/settings/tokens
+
+  function toggleStarVisibility() {
+    document.querySelectorAll('.favorite-star').forEach(star => {
+      star.style.display = adminMode ? 'block' : 'none';
+    });
+    document.getElementById('admin-panel').style.display = adminMode ? 'block' : 'none';
+  }
+
+  // Admin mode activation
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && e.key === 'f') {
+      if (adminMode) {
+        adminMode = false;
+        toggleStarVisibility();
+        alert("ADMIN MODE DEACTIVATED!");
+      } else {
+        const password = prompt("Enter Admin Password:");
+        if (password === ADMIN_PASSWORD) {
+          adminMode = true;
+          toggleStarVisibility();
+          alert("ADMIN MODE ACTIVATED!");
+        } else {
+          alert("Wrong password!");
+        }
+      }
+    }
+  });
+
+  // ===== FAVORITES SYSTEM =====
+  let favorites = [];
+
+  //Github raw API URL for Favourites.json
+  const FAVORITES_FILE_URL = 'https://api.github.com/repos/devilarsh70/DevilArsh70/contents/favorites.json';
+
+  // Load favorites from GitHub
+  async function loadFavorites() {
+    try {
+      const response = await fetch(FAVORITES_FILE_URL);
+      const data = await response.json();
+      const content = atob(data.content); // Decode base64
+      favorites = JSON.parse(content);
+      applyFavoritesToUI();
+    } catch (error) {
+      console.error('Error loading favorites:', error);
+      // Fallback to localStorage
+      const localFavorites = JSON.parse(localStorage.getItem('animeFavorites'));
+      if (localFavorites) favorites = localFavorites;
+    }
+  }
+
+  function applyFavoritesToUI() {
+    document.querySelectorAll('.anime-card').forEach(card => {
+      const title = card.querySelector('.title').textContent;
+      const star = card.querySelector('.favorite-star');
+      
+      if (favorites.includes(title)) {
+        card.classList.add('favorite');
+        star.classList.add('active');
+      } else {
+        card.classList.remove('favorite');
+        star.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize stars and favorites
+  document.querySelectorAll('.anime-card').forEach(card => {
+    const title = card.querySelector('.title').textContent;
+    const star = document.createElement('div');
+    star.className = 'favorite-star';
+    star.innerHTML = '<i class="fas fa-star"></i>';
+    card.prepend(star);
+
+    // Click handler
+    star.addEventListener('click', (e) => {
+      if (!adminMode) return;
+      e.stopPropagation();
+      
+      star.classList.toggle('active');
+      card.classList.toggle('favorite');
+      
+      // Update favorites array
+      if (star.classList.contains('active')) {
+        if (!favorites.includes(title)) favorites.push(title);
+      } else {
+        const index = favorites.indexOf(title);
+        if (index > -1) favorites.splice(index, 1);
+      }
+    });
+  });
+
+  // Save to GitHub function
+  document.getElementById('save-favorites-btn').addEventListener('click', async function() {
+    const message = document.getElementById('admin-message');
+    message.textContent = "Saving to GitHub...";
+    message.style.color = "yellow";
+    
+    try {
+      // Get current SHA
+      const getResponse = await fetch(FAVORITES_FILE_URL);
+      const getData = await getResponse.json();
+      
+      // Update file
+      const updateResponse = await fetch(FAVORITES_FILE_URL, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${GITHUB_TOKEN}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: 'Update favorites',
+          content: btoa(JSON.stringify(favorites)),
+          sha: getData.sha
+        })
+      });
+      
+      if (updateResponse.ok) {
+        message.textContent = "Favorites saved to GitHub successfully!";
+        message.style.color = "lightgreen";
+        localStorage.setItem('animeFavorites', JSON.stringify(favorites));
+      } else {
+        throw new Error('GitHub API error');
+      }
+    } catch (error) {
+      console.error('Save failed:', error);
+      message.textContent = "Error saving to GitHub. Using localStorage instead.";
+      message.style.color = "#ff4d4d";
+      localStorage.setItem('animeFavorites', JSON.stringify(favorites));
+    }
+  });
+
+  // Initial load
+  loadFavorites();
+
+    // Filter favorites
+    document.querySelector('.favorite-btn').addEventListener('click', function() {
+      this.classList.toggle('active');
+      const showFavorites = this.classList.contains('active');
+      
+      document.querySelectorAll('.anime-card').forEach(card => {
+        const title = card.querySelector('.title').textContent;
+        card.style.display = (showFavorites && !favorites.includes(title)) ? 'none' : 'block';
+      });
+    });
+
+    // ===== SORTING FUNCTIONALITY =====
+    const originalOrder = Array.from(document.querySelectorAll('.anime-card'));
+    
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        const sortBy = this.dataset.sort;
+        const container = document.querySelector('.anime-grid');
+
+        if (sortBy === 'default') {
+          // Reset to original order
+          container.innerHTML = '';
+          originalOrder.forEach(card => container.appendChild(card));
+        } else {
+          // Sort cards
+          const cards = Array.from(document.querySelectorAll('.anime-card'));
+          
+          if (sortBy === 'seasons') {
+            cards.sort((a, b) => {
+              // Handle "20+" as 20
+              const aVal = parseInt(a.dataset.seasons) || 0;
+              const bVal = parseInt(b.dataset.seasons) || 0;
+              return bVal - aVal;
+            });
+          } else if (sortBy === 'rating') {
+            cards.sort((a, b) => {
+              const aRating = parseFloat(a.dataset.rating);
+              const bRating = parseFloat(b.dataset.rating);
+              return bRating - aRating;
+            });
+          }
+
+          container.innerHTML = '';
+          cards.forEach(card => container.appendChild(card));
+        }
+      });
+    });
+
+    // ===== SEARCH FUNCTIONALITY =====
+    document.querySelector('.search-box').addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      document.querySelectorAll('.anime-card').forEach(card => {
+        const title = card.querySelector('.title').textContent.toLowerCase();
+        card.style.display = title.includes(searchTerm) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
